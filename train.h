@@ -31,6 +31,8 @@ public:
 	timetable(timetable&&) = delete;
 	train& operator[](unsigned index);
 
+	std::vector<train>::iterator begin();
+	std::vector<train>::iterator end();
 	friend std::ostream& operator<<(std::ostream& out, timetable const& t);
 	friend std::istream& operator>>(std::istream& in, timetable& t);
 

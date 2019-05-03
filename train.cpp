@@ -23,6 +23,16 @@ train& timetable::operator[](unsigned index)
 	return list_[index];
 }
 
+std::vector<train>::iterator timetable::begin()
+{
+	return list_.begin();
+}
+
+std::vector<train>::iterator timetable::end()
+{
+	return list_.end();
+}
+
 std::ostream& operator<<(std::ostream& out, timetable const& t)
 {
 	for (auto i = 0; i < t.voyages_count; i++)
